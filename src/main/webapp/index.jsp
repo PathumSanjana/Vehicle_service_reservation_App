@@ -10,17 +10,14 @@
 <body>
 	<section class="login">
 	    <div class="container">
-	        <div class="row">
-	            <div class="content">
-	                <div class="image">
-	                    <img src="img/profile.jpg" class="login-img"/>
-	                </div>
-	                <div class="app-name"><h1>Vehicle Service Reservation Application</h1></div>
-	                <form class="app-login-form">
-	                    <input type="submit" id="btn-login" class="btn_login" value="LOGIN"/>
-	                </form>
-	            </div>
-	        </div>
+			<div class="app-name"><h1>Vehicle Service Reservation Application</h></div>
+			<div class="image">
+				<img src="img/profile.jpg" class="login-img"/>
+			</div>
+			<div class="app-name"><h3>Reserve your vehicle service now!</h3></div>
+			<form class="app-login-form">
+				<input type="submit" id="btn-login" class="btn_login" value="LOGIN"/>
+			</form>
 	    </div>
 	    <div class="text">
 	        <span>Copyright &copy 2023 | Pathum Sanjana</span>
