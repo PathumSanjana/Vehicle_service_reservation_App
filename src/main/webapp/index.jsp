@@ -23,7 +23,7 @@
 	        </div>
 	    </div>
 	    <div class="text">
-	        <span>Copyright &copy 2023 | Pathum Sanjana   </span>
+	        <span>Copyright &copy 2023 | Pathum Sanjana</span>
 	    </div>
 	</section>
 </body>
