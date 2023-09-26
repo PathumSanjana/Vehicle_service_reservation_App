@@ -53,3 +53,10 @@
     margin-top: 20px;
     color: #807b7b;
 }
+
+.content{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
