@@ -42,6 +42,7 @@
                         <td>Canada</td>
                     </tr>
                 </table>
+                <a href="home.jsp" ><h3 class="btn">Back to Home</h3></a>
             </div>
 	    </div>
 	    <div class="text">
