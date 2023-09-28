@@ -23,7 +23,7 @@
                             <td><input type="text" id="" name="username"></td>
                         </tr>
                         <tr>
-                            <th><h3>Name</h3></th>
+                            <th ><h3>Name</h3></th>
                             <td><h3>:</h3></td>
                             <td><input type="text" id="" name="name"></td>
                         </tr>
@@ -35,7 +35,7 @@
                         <tr>
                             <th><h3>Contact Number</h3></th>
                             <td><h3>:</h3></td>
-                            <td><input type="tel" id="" name="contact_number"></td>
+                            <td><input type="text" id="" name="contact_number"></td>
                         </tr>
                         <tr>
                             <th><h3>Country</h3></th>
@@ -71,7 +71,7 @@
                         <tr>
                             <th><h3>Vehicle Registration Number</h3></th>
                             <td><h3>:</h3></td>
-                            <td><input type="number" id="" name="registration_number"></td>
+                            <td><input type="text" id="" name="registration_number"></td>
                         </tr>
                         <tr>
                             <th><h3>Current Mileage</h3></th>

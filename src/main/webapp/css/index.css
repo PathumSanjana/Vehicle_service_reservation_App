@@ -120,3 +120,12 @@ tr:nth-child(odd) {
   margin-left: 41%;
   
 }
+
+input[type=text], input[type=password], input[type=date], input[type=email] {
+  width: 60%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(191, 188, 188);
+  box-sizing: border-box;
+}
