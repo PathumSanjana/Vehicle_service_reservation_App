@@ -60,3 +60,27 @@
     text-align: center;
 }
 
+.btn{
+    margin-bottom: 15px;
+    background-color:#16126c;
+    padding: 10px 20px;
+    font-weight: 600;
+    align-items: center;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+a{
+    text-decoration: none;
+    align-items: center;
+}
+
+.btn:hover {
+  background-color: white;
+  color: rgb(19, 14, 92);
+  cursor: pointer;
+  border: 1px solid rgb(19, 14, 92);
+}

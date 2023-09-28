@@ -15,9 +15,9 @@
 				<img src="img/profile.jpg" class="login-img"/>
 			</div>
             <div class="content">
-                <a href="home.jsp" class="btn"><h3>View profile information </h3></a>
-                <a href="home.jsp" class="btn"><h3>Make a reservation </h3></a>
-                <a href="home.jsp" class="btn"><h3>View reservations</h3></a>
+                <a href="reservation.jsp" ><h3 class="btn">Make a reservation</h3></a>
+                <a href="profile.jsp" ><h3 class="btn">View profile information</h3></a>
+                <a href="view.jsp" ><h3 class="btn">View reservations</h3></a>
             </div>
 	    </div>
 	    <div class="text">
