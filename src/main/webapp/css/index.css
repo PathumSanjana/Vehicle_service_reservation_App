@@ -84,3 +84,32 @@ a{
   cursor: pointer;
   border: 1px solid rgb(19, 14, 92);
 }
+
+.person-img {
+  width: 150px;
+  height: 150px;
+  margin-right: 33%;
+  margin-left: 33%;
+  
+}
+
+table {
+  border-collapse: collapse;
+  width: 30rem;
+}
+
+th{
+  text-align: right;
+  margin-left: 0;
+  width: 48%;
+}
+
+td{
+  text-align: left;
+  margin-right: 0;
+}
+
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
