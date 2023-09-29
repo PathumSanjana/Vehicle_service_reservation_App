@@ -15,7 +15,7 @@
 				<img src="img/date.png" class="date-img"/>
 			</div>
             <div class="content">
-                <form>
+                <form method="post" action="reservation">
                     <table style="width: 50rem;">
                         <tr>
                             <th style="width: 20rem;"><h3>Username</h3></th>
