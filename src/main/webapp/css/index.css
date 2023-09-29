@@ -1,6 +1,6 @@
 .login {
     position: absolute;
-    top: 10%;
+    top: 8%;
     left: 37%;
     right: 37%;
     display: flex;
@@ -128,4 +128,43 @@ input[type=text], input[type=password], input[type=date], input[type=email] {
   display: inline-block;
   border: 1px solid rgb(191, 188, 188);
   box-sizing: border-box;
+}
+
+.table{
+  width: 91rem;
+  margin-bottom: 17rem;
+}
+
+.table th{
+  width: 13rem;
+  text-align: center;
+  height: 5rem;
+}
+
+.table td{
+  width: 13rem;
+  text-align: center;
+  height: 4rem;
+}
+
+.container1{
+  border: 2px solid rgb(17, 18, 100);
+  align-items: center;
+  height: 40rem;
+}
+
+.delete{
+    background-color:#16126c;
+    padding: 10px 20px;
+    align-items: center;
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+
+.delete:hover {
+  background-color: white;
+  color: rgb(19, 14, 92);
+  cursor: pointer;
+  border: 1px solid rgb(19, 14, 92);
 }
