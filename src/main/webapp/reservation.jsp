@@ -6,8 +6,13 @@
 <meta charset="UTF-8">
 <title>Vehicle_service_reservation_App</title>
 <link href="css/index.css" rel="stylesheet">
+
 </head>
 <body>
+
+<input type="hidden" id="status" value="<%= request.getAttribute("status") %>">
+
+
 	<section class="login">
 	    <div class="container">
 			<div class="app-name"><h1>Reserve a Vehicle Service</h></div>
@@ -90,5 +95,18 @@
 	        <span>Copyright &copy 2023 | Pathum Sanjana</span>
 	    </div>
 	</section>
+	
+	<!-- JS -->
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="alert/dist/sweetalert.css">
+    
+    <script type="text/javascript">
+    
+    var status = document.getElementById("status").value;
+    if(status == "success"){
+    	swal("Congrats","Reservation Added Successfully","success");
+    }
+    
+    </script>
 </body>
 </html>
