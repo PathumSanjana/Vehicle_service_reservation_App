@@ -50,11 +50,7 @@
                         <tr>
                             <th style="width: 20rem;"><h3>Preferred time</h3></th>
                             <td><h3>:</h3></td>
-                            <td><select id="" name="time">
-                                <option value="10 AM">10 AM</option>
-                                <option value="11 AM">11 AM</option>
-                                <option value="12 PM">12 PM</option>
-                              </select></td>
+                            <td><input type="time" id="" name="time"></td>
                         </tr>
                         <tr>
                             <th style="width: 20rem;"><h3>Preferred Location</h3></th>
