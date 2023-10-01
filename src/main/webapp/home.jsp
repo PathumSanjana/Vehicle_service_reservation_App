@@ -17,7 +17,9 @@
             <div class="content">
                 <a href="reservation.jsp" ><h3 class="btn">Make a reservation</h3></a>
                 <a href="profile.jsp" ><h3 class="btn">View profile information</h3></a>
-                <a href="view.jsp" ><h3 class="btn">View reservations</h3></a>
+                <form method="get" action="view">
+                    <input type="submit" id="btn-login" class="btn_login" value="View reservations"/>
+                </form>
             </div>
 	    </div>
 	    <div class="text">
