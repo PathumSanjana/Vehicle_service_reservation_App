@@ -1,6 +1,7 @@
 package com.uniquedeveloper.reservation;
 
 public class Reservation {
+	private String bookingid;
     private String date;
     private String time;
     private String location;
@@ -13,13 +14,22 @@ public class Reservation {
     }
 
     // Parameterized constructor
-    public Reservation(String date, String time, String location, String vehicleNo, String mileage, String message) {
+    public Reservation(String bookingid,String date, String time, String location, String vehicleNo, String mileage, String message) {
+    	this.bookingid = bookingid;
         this.date = date;
         this.time = time;
         this.location = location;
         this.vehicleNo = vehicleNo;
         this.mileage = mileage;
         this.message = message;
+    }
+    
+    public String getBookingid() {
+        return bookingid;
+    }
+
+    public void setBookingid(String bookingid) {
+        this.bookingid = bookingid;
     }
 
     // Getters and setters for date

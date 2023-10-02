@@ -30,11 +30,12 @@ public class ViewServlet extends HttpServlet {
             con = DriverManager.getConnection("jdbc:mysql://51.132.137.223:3306/isec_assessment2?useSSL=false", "isec", "EUHHaYAmtzbv");
 
             // Assuming you have a query to fetch reservations from the database
-            PreparedStatement pst = con.prepareStatement("SELECT date,time,location,vehicle_no,mileage,message FROM vehicle_service WHERE username = 'AAA'");
+            PreparedStatement pst = con.prepareStatement("SELECT booking_id,date,time,location,vehicle_no,mileage,message FROM vehicle_service WHERE username = 'AAA'");
             ResultSet rs = pst.executeQuery();
 
             while (rs.next()) {
                 Reservation reservation = new Reservation();
+                reservation.setBookingid(rs.getString("booking_id"));
                 reservation.setDate(rs.getString("date"));
                 reservation.setTime(rs.getString("time"));
                 reservation.setLocation(rs.getString("location"));
