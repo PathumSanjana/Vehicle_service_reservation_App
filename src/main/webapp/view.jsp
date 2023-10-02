@@ -40,7 +40,7 @@
                             <td>
                                 <!-- Add a delete button and a hidden input field to store the reservation ID -->
                                 <input type="hidden" name="bookingID" value="<%= reservation.getBookingid() %>">
-                                <button type="submit" class="delete">Delete</button>
+                                <button type="submit" class="delete" onclick="return confirmDelete();">Delete</button>
                             </td>
                         </tr>
                         <%
@@ -56,5 +56,12 @@
             <span>Copyright &copy; 2023 | Pathum Sanjana</span>
         </div>
     </section>
+    
+    
+    <script>
+    function confirmDelete() {
+        return confirm("Are you sure you want to delete this reservation?");
+    }
+</script>
 </body>
 </html>
