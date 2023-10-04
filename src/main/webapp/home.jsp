@@ -20,6 +20,7 @@
                 <form method="get" action="view">
                     <input type="submit" id="btn-login" class="btn_login" value="View reservations"/>
                 </form>
+				<a href="logout?SAML2.HTTPBinding=HTTP-POST">Logout</a>
             </div>
 	    </div>
 	    <div class="text">

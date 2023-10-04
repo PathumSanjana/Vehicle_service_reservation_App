@@ -15,7 +15,7 @@
 				<img src="img/profile.jpg" class="login-img"/>
 			</div>
 			<div class="app-name"><h3>Reserve your vehicle service now!</h3></div>
-			<form class="app-login-form" action="home.jsp">
+			<form class="app-login-form" action="samlsso?SAML2.HTTPBinding=HTTP-POST" method="post">
 				<input type="submit" id="btn-login" class="btn_login" value="LOGIN"/>
 			</form>
 	    </div>
