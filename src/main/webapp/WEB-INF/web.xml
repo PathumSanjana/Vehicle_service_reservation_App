@@ -23,7 +23,7 @@
          xmlns="http://java.sun.com/xml/ns/javaee"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 
-    <display-name>io.asgardeo.tomcat.saml.agent.sample</display-name>
+    <display-name>io.asgardeo.tomcat.saml.agent.sample</display-name> 
 
     <filter>
         <filter-name>SAML2SSOAgentFilter</filter-name>
@@ -57,6 +57,8 @@
         <param-name>certificate-file</param-name>
         <param-value>wso2carbon.jks</param-value>
     </context-param>
+    <context-param>
+        <param-name>post-binding-request-page</param-name>
+        <param-value>post_binding_request.html</param-value>
+    </context-param>
 </web-app>
-
-
