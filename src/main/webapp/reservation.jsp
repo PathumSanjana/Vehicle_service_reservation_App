@@ -10,7 +10,12 @@
 </head>
 <body>
 
-<input type="hidden" id="status" value="<%= request.getAttribute("status") %>">
+    <div class="navbar">
+		<div class="logoname"><h1>Vehicle service reservation App</h1></div>
+		<a href="logout?SAML2.HTTPBinding=HTTP-POST" class="logout">Log Out</a>
+	</div>
+
+    <input type="hidden" id="status" value="<%= request.getAttribute("status") %>">
 
 
 	<section class="login">
