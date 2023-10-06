@@ -17,6 +17,7 @@ body{
 .container{
     border: 2px solid rgb(17, 18, 100);
     align-items: center;
+    border-radius: 4%;
 }
 
 .login-img {
