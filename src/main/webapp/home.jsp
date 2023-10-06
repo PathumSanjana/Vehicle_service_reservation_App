@@ -8,9 +8,13 @@
 <link href="css/index.css" rel="stylesheet">
 </head>
 <body>
+	<div class="navbar">
+		<div class="logoname"><h1>Vehicle service reservation App</h1></div>
+		<a href="logout?SAML2.HTTPBinding=HTTP-POST" class="logout">Log Out</a>
+	</div>
 	<section class="login">
 	    <div class="container">
-			<div class="app-name"><h1>HELLO !</h></div>
+			<div class="app-name"><h1>WELCOME</h1></div>
 			<div class="image">
 				<img src="img/profile.jpg" class="login-img"/>
 			</div>
@@ -20,7 +24,7 @@
                 <form method="get" action="view">
                     <input type="submit" id="btn-login" class="btn_login" value="View reservations"/>
                 </form>
-				<a href="logout?SAML2.HTTPBinding=HTTP-POST">Logout</a>
+				
             </div>
 	    </div>
 	    <div class="text">
