@@ -33,26 +33,6 @@
                             <td><input type="text" id="" name="username"></td>
                         </tr>
                         <tr>
-                            <th style="width: 20rem;"><h3>Name</h3></th>
-                            <td><h3>:</h3></td>
-                            <td><input type="text" id="" name="name"></td>
-                        </tr>
-                        <tr>
-                            <th style="width: 20rem;"><h3>Email</h3></th>
-                            <td><h3>:</h3></td>
-                            <td><input type="email" id="" name="email"></td>
-                        </tr>
-                        <tr>
-                            <th style="width: 20rem;"><h3>Contact Number</h3></th>
-                            <td><h3>:</h3></td>
-                            <td><input type="text" id="" name="contact_number"></td>
-                        </tr>
-                        <tr>
-                            <th style="width: 20rem;"><h3>Country</h3></th>
-                            <td><h3>:</h3></td>
-                            <td><input type="text" id="" name="country"></td>
-                        </tr>
-                        <tr>
                             <th style="width: 20rem;"><h3>Date</h3></th>
                             <td><h3>:</h3></td>
                             <td><input type="date" id="" name="date"></td>
@@ -72,17 +52,23 @@
                                 <option value="Galle">Galle</option>
                                 <option value="Kandy">Kandy</option>
                                 <option value="Jaffna">Jaffna</option>
+                                <option value="Anuradhapura">Anuradhapura</option>
+                                <option value="Matara">Matara</option>
+                                <option value="Hambantota">Hambantota</option>
+                                <option value="Rathnapura">Rathnapura</option>
+                                <option value="Mulativ">Mulativ</option>
+                                <option value="Polonnaruwa">Polonnaruwa</option>
                               </select></td>
                         </tr>
                         <tr>
                             <th style="width: 20rem;"><h3>Vehicle Registration Number</h3></th>
                             <td><h3>:</h3></td>
-                            <td><input type="text" id="" name="registration_number"></td>
+                            <td><input type="text" id="" name="registration_number" placeholder="XYZ242"></td>
                         </tr>
                         <tr>
                             <th style="width: 20rem;"><h3>Current Mileage</h3></th>
                             <td><h3>:</h3></td>
-                            <td><input type="text" id="" name="current_mileage"></td>
+                            <td><input type="text" id="" name="current_mileage" placeholder="1000"></td>
                         </tr>
                         <tr>
                             <th style="width: 20rem;"><h3>Message</h3></th>
