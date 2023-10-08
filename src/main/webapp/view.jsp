@@ -10,6 +10,10 @@
     <link href="css/index.css" rel="stylesheet">
 </head>
 <body>
+    <div class="navbar">
+		<div class="logoname"><h1>Vehicle service reservation App</h1></div>
+		<a href="logout?SAML2.HTTPBinding=HTTP-POST" class="logout">Log Out</a>
+	</div>
     <section class="login">
         <div class="container1">
             <div class="app-name"><h1>View reservations</h1></div>
