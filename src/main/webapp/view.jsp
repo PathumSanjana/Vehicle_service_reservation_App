@@ -53,9 +53,10 @@
                         %>
                     </table>
                 </form>
-                <a href="home.jsp"><h3 class="btn" style=" margin-left: 30rem; margin-right: 30rem;">Back to Home</h3></a>
+                
             </div>
         </div>
+        <a href="home.jsp"><h3 class="btn" style="width: 20rem; text-align: center;">Back to Home</h3></a>
         <div class="text">
             <span>Copyright &copy; 2023 | Pathum Sanjana</span>
         </div>
