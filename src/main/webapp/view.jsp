@@ -18,7 +18,7 @@
         <div class="container1">
             <div class="app-name"><h1>View reservations</h1></div>
             <div class="content">
-                <form action="DeleteReservationServlet" method="post"> <!-- Specify the action URL and method for the deletion -->
+                <!--<form action="DeleteReservationServlet" method="post" id="deleteForm">--> <!-- Specify the action URL and method for the deletion -->
                     <table class="table">
                         <tr>
                             <th><h3>Date</h3></th>
@@ -43,8 +43,8 @@
                             <td><%= reservation.getMessage() %></td>
                             <td>
                                 <!-- Add a delete button and a hidden input field to store the reservation ID -->
-                                <input type="hidden" name="bookingID" value="<%= reservation.getBookingid() %>">
-                                <button type="submit" class="delete" onclick="return confirmDelete();">Delete</button>
+                                <!--<input type="hidden" name="bookingID" value="">-->
+                                <button type="submit" class="delete" onclick="confirmDelete('<%= reservation.getBookingid() %>');">Delete</button>
                             </td>
                         </tr>
                         <%
@@ -52,7 +52,7 @@
                             }
                         %>
                     </table>
-                </form>
+                <!--</form>-->
                 
             </div>
         </div>
@@ -64,8 +64,13 @@
     
     
     <script>
-    function confirmDelete() {
-        return confirm("Are you sure you want to delete this reservation?");
+    function confirmDelete(reservationId) {
+        if (confirm("Are you sure you want to delete this reservation?")) {
+            // Redirect to the servlet with the reservationId as a query parameter
+            window.location.href = "DeleteReservationServlet?reservationId=" + reservationId;
+            //document.getElementById('deleteForm').bookingID.value = reservationId;
+            //document.getElementById('deleteForm').submit();
+        }
     }
 </script>
 </body>

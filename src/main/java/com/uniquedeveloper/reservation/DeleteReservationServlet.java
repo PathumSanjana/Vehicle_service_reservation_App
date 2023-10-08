@@ -18,9 +18,9 @@ public class DeleteReservationServlet extends HttpServlet {
     private static final String JDBC_USERNAME = "root";
     private static final String JDBC_PASSWORD = "PApa199902#!";
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Get the bookingid from the request parameter
-        String bookingid = request.getParameter("bookingID");
+        String bookingid = request.getParameter("reservationId");
 
         if (bookingid != null) {
             // Delete the reservation
