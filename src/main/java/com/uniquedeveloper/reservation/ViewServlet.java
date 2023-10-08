@@ -8,6 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -15,6 +16,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import io.asgardeo.java.saml.sdk.util.SSOAgentConstants;
+import io.asgardeo.java.saml.sdk.bean.LoggedInSessionBean;
+import io.asgardeo.java.saml.sdk.bean.LoggedInSessionBean.SAML2SSO;
 
 @WebServlet("/view")
 public class ViewServlet extends HttpServlet {
@@ -26,11 +30,23 @@ public class ViewServlet extends HttpServlet {
         Connection con = null;
 
         try {
+            // Retrieve the session bean.
+            LoggedInSessionBean sessionBean = (LoggedInSessionBean) request.getSession().getAttribute(SSOAgentConstants.SESSION_BEAN_NAME);
+            // SAML response
+            SAML2SSO samlResponse = sessionBean.getSAML2SSO();
+            // Authenticated username
+            String username = samlResponse.getSubjectId();
+
+            // Load the MySQL driver and establish a connection
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/isec_assessment2?useSSL=false", "root", "PApa199902#!");
 
-            // Assuming you have a query to fetch reservations from the database
-            PreparedStatement pst = con.prepareStatement("SELECT booking_id,date,time,location,vehicle_no,mileage,message FROM vehicle_service WHERE username = 'sanjanapathum1999@gmail.com'");
+            // Prepare the SQL query with a placeholder for the username
+            String sql = "SELECT booking_id, date, time, location, vehicle_no, mileage, message FROM vehicle_service WHERE username = ?";
+            PreparedStatement pst = con.prepareStatement(sql);
+            pst.setString(1, username); // Set the username in the query
+
+            // Execute the query
             ResultSet rs = pst.executeQuery();
 
             while (rs.next()) {
@@ -46,12 +62,14 @@ public class ViewServlet extends HttpServlet {
             }
 
             request.setAttribute("reservations", reservations);
-            
+
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
             try {
-                con.close();
+                if (con != null) {
+                    con.close();
+                }
             } catch (SQLException e) {
                 e.printStackTrace();
             }
