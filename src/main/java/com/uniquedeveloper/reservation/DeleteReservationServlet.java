@@ -14,9 +14,9 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/DeleteReservationServlet")
 public class DeleteReservationServlet extends HttpServlet {
-    private static final String JDBC_URL = "jdbc:mysql://51.132.137.223:3306/isec_assessment2";
-    private static final String JDBC_USERNAME = "isec";
-    private static final String JDBC_PASSWORD = "EUHHaYAmtzbv";
+    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/isec_assessment2";
+    private static final String JDBC_USERNAME = "root";
+    private static final String JDBC_PASSWORD = "PApa199902#!";
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Get the bookingid from the request parameter

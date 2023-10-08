@@ -27,10 +27,10 @@ public class ViewServlet extends HttpServlet {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://51.132.137.223:3306/isec_assessment2?useSSL=false", "isec", "EUHHaYAmtzbv");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/isec_assessment2?useSSL=false", "root", "PApa199902#!");
 
             // Assuming you have a query to fetch reservations from the database
-            PreparedStatement pst = con.prepareStatement("SELECT booking_id,date,time,location,vehicle_no,mileage,message FROM vehicle_service WHERE username = 'AAA'");
+            PreparedStatement pst = con.prepareStatement("SELECT booking_id,date,time,location,vehicle_no,mileage,message FROM vehicle_service WHERE username = 'sanjanapathum1999@gmail.com'");
             ResultSet rs = pst.executeQuery();
 
             while (rs.next()) {
