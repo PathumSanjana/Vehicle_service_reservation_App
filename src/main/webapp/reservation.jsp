@@ -60,22 +60,22 @@ Map<String, String> saml2SSOAttributes = samlResponse.getSubjectAttributes();
                         <tr>
                             <th style="width: 20rem;"><h3>Username</h3></th>
                             <td><h3>:</h3></td>
-                            <td><input type="text" id="" name="username" value="<%=username %>"></td>
+                            <td><input type="text" id="" name="username" required="required" value="<%=username %>"></td>
                         </tr>
                         <tr>
                             <th style="width: 20rem;"><h3>Date</h3></th>
                             <td><h3>:</h3></td>
-                            <td><input type="date" id="" name="date"></td>
+                            <td><input type="date" id="" name="date" required="required"></td>
                         </tr>
                         <tr>
                             <th style="width: 20rem;"><h3>Preferred time</h3></th>
                             <td><h3>:</h3></td>
-                            <td><input type="time" id="" name="time"></td>
+                            <td><input type="time" id="" name="time" required="required"></td>
                         </tr>
                         <tr>
                             <th style="width: 20rem;"><h3>Preferred Location</h3></th>
                             <td><h3>:</h3></td>
-                            <td><select id="" name="location">
+                            <td><select id="" name="location" required="required">
                                 <option value="Colombo">Colombo</option>
                                 <option value="Kalutara">Kalutara</option>
                                 <option value="Gampaha">Gampaha</option>
@@ -93,18 +93,17 @@ Map<String, String> saml2SSOAttributes = samlResponse.getSubjectAttributes();
                         <tr>
                             <th style="width: 20rem;"><h3>Vehicle Registration Number</h3></th>
                             <td><h3>:</h3></td>
-                            <td><input type="text" id="" name="registration_number" placeholder="XYZ242"></td>
+                            <td><input type="text" id="" name="registration_number" placeholder="XYZ242" required="required"></td>
                         </tr>
                         <tr>
                             <th style="width: 20rem;"><h3>Current Mileage</h3></th>
                             <td><h3>:</h3></td>
-                            <td><input type="text" id="" name="current_mileage" placeholder="1000"></td>
+                            <td><input type="text" id="" name="current_mileage" placeholder="1000" required="required"></td>
                         </tr>
                         <tr>
                             <th style="width: 20rem;"><h3>Message</h3></th>
                             <td><h3>:</h3></td>
-                            <td><textarea name="message" rows="3" cols="30">
-                                message</textarea></td>
+                            <td><textarea name="message" rows="3" cols="30" placeholder="message" required="required"></textarea></td>
                         </tr>
                     </table>
                     <input type="submit" id="btn-login" class="btn_login" value="SUBMIT" style="font-weight: 600; margin-top: 30px;"/>
