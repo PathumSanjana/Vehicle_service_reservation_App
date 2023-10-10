@@ -126,7 +126,30 @@ Map<String, String> saml2SSOAttributes = samlResponse.getSubjectAttributes();
     if(status == "success"){
     	swal("Congrats","Reservation Added Successfully","success");
     }
-    
+    if(status == "empty"){
+    	swal("Wrong","Please fill all fields","error");
+    }
+    if(status == "invaliduser"){
+    	swal("Wrong","Invalid Username","error");
+    }
+    if(status == "invalidno"){
+    	swal("Wrong","Invalid Vehicle Number","error");
+    }
+    if(status == "invalidmileage"){
+    	swal("Wrong","Incorrect mileage","error");
+    }
+    if(status == "invalidmessage"){
+    	swal("Wrong","Incorrect message","error");
+    }
+    if(status == "invaliddate"){
+    	swal("Wrong","Incorrect date","error");
+    }
+    if(status == "invalidtime"){
+    	swal("Wrong","Incorrect time","error");
+    }
+    if(status == "invalidlocation"){
+    	swal("Wrong","Incorrect location","error");
+    }
     </script>
 </body>
 </html>
