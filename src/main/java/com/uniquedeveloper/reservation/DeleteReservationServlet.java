@@ -23,19 +23,37 @@ public class DeleteReservationServlet extends HttpServlet {
         String bookingid = request.getParameter("reservationId");
 
         if (bookingid != null) {
-            // Delete the reservation
-            boolean deleted = deleteReservation(bookingid);
+            // Validate bookingid
+            if (isValidBookingId(bookingid)) {
+                // Delete the reservation
+                boolean deleted = deleteReservation(bookingid);
 
-            if (deleted) {
-                // Reservation deleted successfully, you can redirect to a success page or update the reservation list
-            	response.sendRedirect(request.getContextPath() + "/view");
+                if (deleted) {
+                    // Reservation deleted successfully, you can redirect to a success page or update the reservation list
+                    response.sendRedirect(request.getContextPath() + "/view");
+                } else {
+                    // Handle the case where deletion fails (e.g., display an error message)
+                    response.getWriter().println("Failed to delete reservation.");
+                }
             } else {
-                // Handle the case where deletion fails (e.g., display an error message)
-                response.getWriter().println("Failed to delete reservation.");
+                // Handle the case where bookingid is not a valid integer
+                response.getWriter().println("Invalid bookingid. Please provide a valid bookingid.");
             }
         } else {
             // Handle the case where bookingid is missing in the request
             response.getWriter().println("Invalid request.");
+        }
+    }
+
+    // Method to validate bookingid as an integer
+    private boolean isValidBookingId(String bookingid) {
+        try {
+            // Attempt to parse bookingid as an integer
+            Integer.parseInt(bookingid);
+            return true;
+        } catch (NumberFormatException e) {
+            // bookingid is not a valid integer
+            return false;
         }
     }
 
