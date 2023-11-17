@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 public class DeleteReservationServlet extends HttpServlet {
     private static final String JDBC_URL = "jdbc:mysql://localhost:3306/isec_assessment2";
     private static final String JDBC_USERNAME = "root";
-    private static final String JDBC_PASSWORD = "PApa199902#!";
+    private static final String JDBC_PASSWORD = "";
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Get the bookingid from the request parameter

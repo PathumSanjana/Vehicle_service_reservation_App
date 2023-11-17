@@ -196,7 +196,7 @@ input[type=text], input[type=password], input[type=date], input[type=email] {
   margin-left: 60rem;
   background-color: white;
   color: #16126c;
-  padding: 10px 20px;
+  padding: 10px 10px;
   text-align: center;
   font-weight: bold;
   outline: none;
