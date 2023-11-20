@@ -26,6 +26,19 @@ public class ReservationServlet extends HttpServlet {
        
    
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		// Retrieve the CSRF token from the session
+        String csrfTokenFromSession = (String) request.getSession().getAttribute("csrfToken");
+
+        // Retrieve the CSRF token from the form submission
+        String csrfTokenFromForm = request.getParameter("csrfToken");
+
+        // Check if the CSRF tokens match
+        if (csrfTokenFromSession == null || csrfTokenFromForm == null || !csrfTokenFromSession.equals(csrfTokenFromForm)) {
+            // CSRF token mismatch, handle the error (you might want to redirect to an error page)
+            response.sendRedirect("error.jsp");
+            return;
+        }
 
 		String date = request.getParameter("date");
 		String time = request.getParameter("time");
@@ -125,6 +138,9 @@ public class ReservationServlet extends HttpServlet {
 				e.printStackTrace();
 			}
 		}
+		
+		// Remove the CSRF token from the session after use
+        request.getSession().removeAttribute("csrfToken");
 	}
 
 }

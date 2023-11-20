@@ -15,6 +15,10 @@ SAML2SSO samlResponse = sessionBean.getSAML2SSO();
 String subjectId = samlResponse.getSubjectId();
 // Authenticated user's attributes
 Map<String, String> saml2SSOAttributes = samlResponse.getSubjectAttributes();
+
+//Generate and set CSRF token in the session
+String csrfToken = java.util.UUID.randomUUID().toString();
+session.setAttribute("csrfToken", csrfToken);
 %>
 
 <!DOCTYPE html>
@@ -43,6 +47,8 @@ Map<String, String> saml2SSOAttributes = samlResponse.getSubjectAttributes();
 			</div>
             <div class="content">
                 <form method="post" action="reservation">
+                    <!-- Include CSRF token in the form -->
+                    <input type="hidden" name="csrfToken" value="<%= csrfToken %>">
                     <table style="width: 50rem;">
                         <% 
                             String username = null;
