@@ -21,7 +21,7 @@
             <div class="content">
 				<a href="reservation.jsp"><h3 class="btn" style=" margin-left: 20%; margin-right: 20%;">Make a reservation</h3></a>
 				<a href="profile.jsp"><h3 class="btn" style=" margin-left: 20%; margin-right: 20%;">View profile information</h3></a>
-				<a href="view.jsp"><h3 class="btn" style=" margin-left: 20%; margin-right: 20%;">View reservations</h3></a>	
+				<a href="view"><h3 class="btn" style=" margin-left: 20%; margin-right: 20%;">View reservations</h3></a>	
             </div>
 	    </div>
 	    <div class="text">
