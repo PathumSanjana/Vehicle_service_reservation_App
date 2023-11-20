@@ -19,16 +19,9 @@
 				<img src="img/profile.jpg" class="login-img"/>
 			</div>
             <div class="content">
-				<form action="reservation.jsp">
-                    <input type="submit" id="btn-login" class="btn_login" value="Make a reservation" style="padding: 10px,20px; font-size: 1.1rem;font-weight: 600;"/>
-                </form>
-				<form action="profile.jsp">
-                    <input type="submit" id="btn-login" class="btn_login" value="View profile information" style="padding: 10px,20px; font-size: 1.1rem;font-weight: 600;"/>
-                </form>
-                <form method="get" action="view">
-                    <input type="submit" id="btn-login" class="btn_login" value="View reservations" style="padding: 10px,20px; font-size: 1.1rem;font-weight: 600;"/>
-                </form>
-				
+				<a href="reservation.jsp"><h3 class="btn" style=" margin-left: 20%; margin-right: 20%;">Make a reservation</h3></a>
+				<a href="profile.jsp"><h3 class="btn" style=" margin-left: 20%; margin-right: 20%;">View profile information</h3></a>
+				<a href="view.jsp"><h3 class="btn" style=" margin-left: 20%; margin-right: 20%;">View reservations</h3></a>	
             </div>
 	    </div>
 	    <div class="text">
