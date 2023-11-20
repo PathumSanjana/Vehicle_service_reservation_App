@@ -30,13 +30,26 @@
                         <th><h3>Message</h3></th>
                         <th><h3>Action</h3></th>
                     </tr>
-                    <% 
+                    <%  //Generate and set CSRF token in the session
+                            	  String csrfToken = java.util.UUID.randomUUID().toString();
+                            	  session.setAttribute("csrfToken", csrfToken);
+                            	//String csrfToken = (String) request.getSession().getAttribute("csrfToken");
+                    
+                    
                         List<Reservation> reservations = (List<Reservation>) request.getAttribute("reservations");
                         Date today = new Date(); // Get the current date and time
                         SimpleDateFormat dateTimeFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm"); // Define a date and time format
                         if (reservations != null) {
                             for (Reservation reservation : reservations) {
+                            	
+                            	
                                 Date reservationDateTime = dateTimeFormat.parse(reservation.getDate() + " " + reservation.getTime());
+                                //String csrfToken = java.util.UUID.randomUUID().toString();
+                                //session.setAttribute("csrfToken", csrfToken);
+                                //csrfToken = (String) request.getSession().getAttribute("csrfToken");
+                                if (csrfToken == null) {
+                                    csrfToken = ""; // Handle the case where the CSRF token is not set
+                                }
                     %>
                     <tr>
                         <td><%= reservation.getDate() %></td>
@@ -46,11 +59,15 @@
                         <td><%= reservation.getMileage() %></td>
                         <td><%= reservation.getMessage() %></td>
                         <td>
-                            <% if (reservationDateTime.compareTo(today) > 0) {  %>
-                                <button class="delete" onclick="confirmDelete('<%= reservation.getBookingid() %>');">Delete</button>
-                            <% } else { %>
-                                <p>Expired</p>
-                            <% }  %>
+                            <form method="post" action="DeleteReservationServlet">
+                                <input type="hidden" name="csrfToken" value="<%= csrfToken %>">
+                                <input type="hidden" name="reservationId" value="<%= reservation.getBookingid() %>">
+                                <% if (reservationDateTime.compareTo(today) > 0) {  %>
+                                    <button type="submit" class="delete" onclick="return confirm('Are you sure you want to delete this reservation?');">Delete</button>
+                                <% } else { %>
+                                    <p>Expired</p>
+                                <% }  %>
+                            </form>
                         </td>
                     </tr>
                     <%
@@ -65,14 +82,5 @@
             <span>Copyright &copy; 2023 | Pathum Sanjana</span>
         </div>
     </section>
-    
-    <script>
-    function confirmDelete(reservationId) {
-        if (confirm("Are you sure you want to delete this reservation?")) {
-            // Redirect to the servlet with the reservationId as a query parameter
-            window.location.href = "DeleteReservationServlet?reservationId=" + reservationId;
-        }
-    }
-    </script>
 </body>
 </html>

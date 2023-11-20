@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,7 +19,16 @@ public class DeleteReservationServlet extends HttpServlet {
     private static final String JDBC_USERNAME = "root";
     private static final String JDBC_PASSWORD = "";
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Validate CSRF token
+        if (!isValidCSRFToken(request)) {
+            response.getWriter().println("Invalid CSRF Token. Request denied.");
+            return;
+        }
+        
+        // Remove the CSRF token from the session after use
+        //request.getSession().removeAttribute("csrfToken");
+
         // Get the bookingid from the request parameter
         String bookingid = request.getParameter("reservationId");
 
@@ -83,7 +93,12 @@ public class DeleteReservationServlet extends HttpServlet {
             return false; // Deletion failed
         }
     }
+
+    // Method to validate CSRF token
+    private boolean isValidCSRFToken(HttpServletRequest request) {
+        String csrfToken = request.getParameter("csrfToken");
+        String sessionToken = (String) request.getSession().getAttribute("csrfToken");
+
+        return csrfToken != null && csrfToken.equals(sessionToken);
+    }
 }
-
-
-

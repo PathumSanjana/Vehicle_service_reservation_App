@@ -140,7 +140,7 @@ public class ReservationServlet extends HttpServlet {
 		}
 		
 		// Remove the CSRF token from the session after use
-        request.getSession().removeAttribute("csrfToken");
+        //request.getSession().removeAttribute("csrfToken");
 	}
 
 }
