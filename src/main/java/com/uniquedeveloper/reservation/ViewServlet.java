@@ -39,7 +39,7 @@ public class ViewServlet extends HttpServlet {
 
             // Load the MySQL driver and establish a connection
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/isec_assessment2?useSSL=false", "root", "");
+            con = DriverManager.getConnection("jdbc:mysql://172.187.178.153:3306/isec_assessment2?useSSL=false","isec","EUHHaYAmtzbv");
 
             // Prepare the SQL query with a placeholder for the username
             String sql = "SELECT booking_id, date, time, location, vehicle_no, mileage, message FROM vehicle_service WHERE username = ?";
