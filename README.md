@@ -79,27 +79,27 @@ Prerequisites
 - Java Development Kit (JDK) installed.
 
 ## Steps
-1.Build the Project:
+1. Build the Project:
 Navigate to the project directory and build the WAR (Web Application Archive) file.
-      ```bash
-      cd your-repository
-      ./gradlew build
+   ```bash
+   cd your-repository
+   ./gradlew build
 This will create a build directory containing the WAR file (e.g., your-repository.war).
 
-2.Deploy to Tomcat:
+2. Deploy to Tomcat:
 Copy the WAR file to the Tomcat webapps directory.
-      ```bash
-      cp build/libs/your-repository.war /path/to/tomcat/webapps/
+   ```bash
+   cp build/libs/your-repository.war /path/to/tomcat/webapps/
       
-3.Start Tomcat:
+3. Start Tomcat:
 Start or restart your Tomcat server.
-      ```bash
-      /path/to/tomcat/bin/startup.sh
+   ```bash
+   /path/to/tomcat/bin/startup.sh
 
-4.Access the Application:
+4. Access the Application:
 Open a web browser and navigate to the following URL:
-      ```bash
-      https://localhost:8080/your-repository
+   ```bash
+   https://localhost:8080/your-repository
 Replace your-repository with the name of your deployed WAR file.
 
 ## Configuration
