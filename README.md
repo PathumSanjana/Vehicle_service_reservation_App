@@ -69,9 +69,9 @@ Access control is enforced based on the access token obtained from the cloud-bas
    ```bash
    git clone https://github.com/PathumSanjana/Vehicle_service_reservation_App.git
 
-2.Install dependencies and set up the environment.
+ 2.Install dependencies and set up the environment.
 
-3.Deploy the web application on Tomcat.
+ 3.Deploy the web application on Tomcat.
 
 ## Deployment on Tomcat
 Prerequisites
